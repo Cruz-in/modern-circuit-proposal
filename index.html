@@ -6,81 +6,123 @@
     <title>Modern Circuit Proposal</title>
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-              display: ['Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+              display: ["Outfit", "ui-sans-serif", "system-ui", "sans-serif"],
             },
             colors: {
               brand: {
-                gray: '#1a1a1a',
-                dark: '#121212',
-                secondary: '#2a2a2a',
-                neon: '#ccff00',
-              }
-            }
-          }
-        }
-      }
+                gray: "#1a1a1a",
+                dark: "#121212",
+                secondary: "#2a2a2a",
+                neon: "#ccff00",
+              },
+            },
+          },
+        },
+      };
     </script>
     <style type="text/tailwindcss">
       @layer utilities {
-        .reveal, .reveal-left, .reveal-right {
+        .reveal,
+        .reveal-left,
+        .reveal-right {
           opacity: 0;
-          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+          transition:
+            opacity 0.6s ease-out,
+            transform 0.6s ease-out;
         }
-        .reveal { transform: translateY(30px); }
-        .reveal-left { transform: translateX(-30px); }
-        .reveal-right { transform: translateX(30px); }
-        .reveal.active, .reveal-left.active, .reveal-right.active {
+        .reveal {
+          transform: translateY(30px);
+        }
+        .reveal-left {
+          transform: translateX(-30px);
+        }
+        .reveal-right {
+          transform: translateX(30px);
+        }
+        .reveal.active,
+        .reveal-left.active,
+        .reveal-right.active {
           opacity: 1;
           transform: translate(0, 0);
         }
-        .delay-100 { transition-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; }
-        .delay-400 { transition-delay: 400ms; }
+        .delay-100 {
+          transition-delay: 100ms;
+        }
+        .delay-200 {
+          transition-delay: 200ms;
+        }
+        .delay-300 {
+          transition-delay: 300ms;
+        }
+        .delay-400 {
+          transition-delay: 400ms;
+        }
       }
       body {
         background-color: #121212;
         color: white;
       }
-      ::-webkit-scrollbar { width: 8px; }
-      ::-webkit-scrollbar-track { background: #121212; }
-      ::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 9999px; }
-      ::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #121212;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #2a2a2a;
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #4b5563;
+      }
     </style>
   </head>
-  <body class="bg-brand-dark text-white antialiased selection:bg-brand-neon selection:text-black overflow-x-hidden min-h-screen">
-    
+  <body
+    class="bg-brand-dark text-white antialiased selection:bg-brand-neon selection:text-black overflow-x-hidden min-h-screen">
     <!-- HERO -->
-    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-6">
+    <section
+      class="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-6">
       <div class="absolute inset-0 z-0">
-         <div class="absolute inset-0 bg-brand-dark/90 z-10"></div>
-         <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-neon/20 rounded-full blur-[150px] mix-blend-screen pointer-events-none"></div>
+        <div class="absolute inset-0 bg-brand-dark/90 z-10"></div>
+        <div
+          class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-neon/20 rounded-full blur-[150px] mix-blend-screen pointer-events-none"></div>
       </div>
-      
-      <div id="hero-content" class="relative z-10 text-center max-w-5xl mx-auto transition-transform duration-75">
+
+      <div
+        id="hero-content"
+        class="relative z-10 text-center max-w-5xl mx-auto transition-transform duration-75">
         <div class="reveal active" style="transition-delay: 200ms">
-          <div class="inline-block px-4 py-1.5 rounded-full border border-brand-neon/30 bg-brand-neon/10 text-brand-neon text-sm font-bold tracking-widest uppercase mb-8">
+          <div
+            class="inline-block px-4 py-1.5 rounded-full border border-brand-neon/30 bg-brand-neon/10 text-brand-neon text-sm font-bold tracking-widest uppercase mb-8">
             Website Design & Development Proposal
           </div>
-          
-          <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-6 tracking-tight">
+
+          <h1
+            class="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-6 tracking-tight">
             Modern Circuit <span class="text-brand-neon">Electrical</span>
           </h1>
-          
-          <p class="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mx-auto mb-12">
-            Prepared exclusively for <strong class="text-white font-medium">Mike Hamm</strong>
+
+          <p
+            class="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mx-auto mb-12">
+            Prepared exclusively for
+            <strong class="text-white font-medium">Mike Hamm</strong>
           </p>
         </div>
-        
-        <div class="animate-bounce reveal active" style="transition-delay: 1.2s; transition-duration: 1s;">
-          <div class="w-1 h-12 bg-gradient-to-b from-brand-neon to-transparent mx-auto rounded-full mt-16 opacity-50"></div>
+
+        <div
+          class="animate-bounce reveal active"
+          style="transition-delay: 1.2s; transition-duration: 1s">
+          <div
+            class="w-1 h-12 bg-gradient-to-b from-brand-neon to-transparent mx-auto rounded-full mt-16 opacity-50"></div>
         </div>
       </div>
     </section>
@@ -88,239 +130,524 @@
     <!-- OBJECTIVE -->
     <section class="py-24 px-6 max-w-7xl mx-auto">
       <div class="mb-16 reveal delay-100">
-        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 text-white uppercase tracking-wider">The Objective</h2>
+        <h2
+          class="text-4xl md:text-5xl font-display font-bold mb-6 text-white uppercase tracking-wider">
+          The Website's Objective
+        </h2>
         <div class="flex flex-col md:flex-row gap-12">
           <div class="md:w-1/2">
-            <h3 class="text-3xl font-display font-semibold mb-4 text-brand-neon">Establish Instant Trust</h3>
+            <h3
+              class="text-3xl font-display font-semibold mb-4 text-brand-neon">
+              Establish Instant Trust
+            </h3>
             <p class="text-gray-300 text-lg leading-relaxed mb-6">
-              Modern Circuit Electrical needs a digital handshake that communicates authority to Winnipeg homeowners and businesses.
+              Modern Circuit Electrical needs a digital handshake that
+              communicates authority to Winnipeg homeowners and businesses.
             </p>
             <ul class="space-y-4">
-              <li class="flex items-center gap-3 text-gray-300 reveal-left delay-100">
+              <li
+                class="flex items-center gap-3 text-gray-300 reveal-left delay-100">
                 <span class="w-2 h-2 bg-brand-neon static shrink-0"></span>
                 <span class="text-lg">Filter out the tire-kickers.</span>
               </li>
-              <li class="flex items-center gap-3 text-gray-300 reveal-left delay-200">
+              <li
+                class="flex items-center gap-3 text-gray-300 reveal-left delay-200">
                 <span class="w-2 h-2 bg-brand-neon static shrink-0"></span>
-                <span class="text-lg">Highlight local renovation expertise.</span>
+                <span class="text-lg"
+                  >Highlight local renovation expertise.</span
+                >
               </li>
-              <li class="flex items-center gap-3 text-gray-300 reveal-left delay-300">
+              <li
+                class="flex items-center gap-3 text-gray-300 reveal-left delay-300">
                 <span class="w-2 h-2 bg-brand-neon static shrink-0"></span>
-                <span class="text-lg">Frictionless contact for serious clients.</span>
+                <span class="text-lg"
+                  >Frictionless contact for serious clients.</span
+                >
               </li>
-              <li class="flex items-center gap-3 text-gray-300 reveal-left delay-400">
+              <li
+                class="flex items-center gap-3 text-gray-300 reveal-left delay-400">
                 <span class="w-2 h-2 bg-brand-neon static shrink-0"></span>
                 <span class="text-lg">Zero "flashy" corporate fluff.</span>
               </li>
             </ul>
           </div>
           <div class="md:w-1/2 flex items-center justify-center">
-            <div class="w-full aspect-square md:aspect-[4/3] bg-brand-secondary border border-gray-800 rounded-lg overflow-hidden relative group reveal delay-300">
-                <div class="absolute inset-0 bg-[url('https://cdn.mdcwall.com/assets/images/products/BBPH01.jpg?width=600')] bg-cover bg-center mix-blend-overlay opacity-60 group-hover:opacity-100 transition-opacity duration-700"></div>
-                <div class="absolute inset-0 bg-gradient-to-tr from-brand-dark to-transparent opacity-80"></div>
+            <div
+              class="w-full aspect-square md:aspect-[4/3] bg-brand-secondary border border-gray-800 rounded-lg overflow-hidden relative group reveal delay-300">
+              <div
+                class="absolute inset-0 bg-[url('https://cdn.mdcwall.com/assets/images/products/BBPH01.jpg?width=600')] bg-cover bg-center mix-blend-overlay opacity-60 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-tr from-brand-dark to-transparent opacity-80"></div>
             </div>
           </div>
         </div>
       </div>
 
       <div class="reveal delay-200">
-        <h2 class="text-3xl font-display font-bold mb-10 text-white uppercase tracking-wider">Our Approach</h2>
+        <h2
+          class="text-3xl font-display font-bold mb-10 text-white uppercase tracking-wider">
+          Our Approach
+        </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <div class="bg-brand-gray border border-brand-neon/20 p-8 rounded-xl shadow-[0_0_15px_rgba(204,255,0,0.05)] hover:shadow-[0_0_25px_rgba(204,255,0,0.1)] hover:-translate-y-1 transition-all duration-300">
+          <div
+            class="bg-brand-gray border border-brand-neon/20 p-8 rounded-xl shadow-[0_0_15px_rgba(204,255,0,0.05)] hover:shadow-[0_0_25px_rgba(204,255,0,0.1)] hover:-translate-y-1 transition-all duration-300">
             <div class="mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-brand-neon"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-8 h-8 text-brand-neon">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m4.9 4.9 14.2 14.2" />
+              </svg>
             </div>
             <h4 class="text-2xl font-display font-bold mb-4">Anti-Fluff</h4>
-            <p class="text-gray-400 text-lg leading-relaxed">We eliminate generic corporate speak. We architect your text into highly scannable, punchy layouts that respect the user's time.</p>
+            <p class="text-gray-400 text-lg leading-relaxed">
+              Eliminate generic corporate speak. We architect your text into
+              highly scannable, punchy layouts that respect the user's time.
+            </p>
           </div>
 
-          <div class="bg-brand-gray border border-brand-neon/20 p-8 rounded-xl shadow-[0_0_15px_rgba(204,255,0,0.05)] hover:shadow-[0_0_25px_rgba(204,255,0,0.1)] hover:-translate-y-1 transition-all duration-300 delay-100 reveal">
+          <div
+            class="bg-brand-gray border border-brand-neon/20 p-8 rounded-xl shadow-[0_0_15px_rgba(204,255,0,0.05)] hover:shadow-[0_0_25px_rgba(204,255,0,0.1)] hover:-translate-y-1 transition-all duration-300 delay-100 reveal">
             <div class="mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-brand-neon"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2-1 4-2 7-2 2.5 0 4.5 1.2 7 2a1 1 0 0 1 1 1v7z"/><path d="m9 12 2 2 4-4"/></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-8 h-8 text-brand-neon">
+                <path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2-1 4-2 7-2 2.5 0 4.5 1.2 7 2a1 1 0 0 1 1 1v7z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
             </div>
-            <h4 class="text-2xl font-display font-bold mb-4">Built for Trust</h4>
-            <p class="text-gray-400 text-lg leading-relaxed">Using bold typography, strict color palettes, and real data metrics to prove you are the premium choice in the market.</p>
+            <h4 class="text-2xl font-display font-bold mb-4">
+              Built for Trust
+            </h4>
+            <p class="text-gray-400 text-lg leading-relaxed">
+              Using bold typography, strict color palettes, and real data
+              metrics to prove you are the premium choice in the market.
+            </p>
           </div>
 
-          <div class="bg-brand-gray border border-brand-neon/20 p-8 rounded-xl shadow-[0_0_15px_rgba(204,255,0,0.05)] hover:shadow-[0_0_25px_rgba(204,255,0,0.1)] hover:-translate-y-1 transition-all duration-300 delay-200 reveal">
+          <div
+            class="bg-brand-gray border border-brand-neon/20 p-8 rounded-xl shadow-[0_0_15px_rgba(204,255,0,0.05)] hover:shadow-[0_0_25px_rgba(204,255,0,0.1)] hover:-translate-y-1 transition-all duration-300 delay-200 reveal">
             <div class="mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-brand-neon"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-8 h-8 text-brand-neon">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
             </div>
-            <h4 class="text-2xl font-display font-bold mb-4">Fast & Responsive</h4>
-            <p class="text-gray-400 text-lg leading-relaxed">A mobile-first architecture ensures your site loads instantly and looks flawless on the devices where homeowners actually search.</p>
+            <h4 class="text-2xl font-display font-bold mb-4">
+              Fast & Responsive
+            </h4>
+            <p class="text-gray-400 text-lg leading-relaxed">
+              A mobile-first architecture ensures your site loads instantly and
+              looks flawless on the devices where homeowners actually search.
+            </p>
           </div>
-          
         </div>
       </div>
     </section>
 
     <!-- INVESTMENT -->
-    <section class="py-24 px-6 max-w-7xl mx-auto border-t border-brand-secondary">
+    <section
+      class="py-24 px-6 max-w-7xl mx-auto border-t border-brand-secondary">
       <div class="text-center mb-20 reveal">
-        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 text-white uppercase tracking-wider">The Investment</h2>
+        <h2
+          class="text-4xl md:text-5xl font-display font-bold mb-6 text-white uppercase tracking-wider">
+          The Investment
+        </h2>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          Introducing the <span class="text-brand-neon font-semibold">Founding Client Rate</span>. Applied exclusively in exchange for your testimonial and word-of-mouth referrals.
+          Introducing the
+          <span class="text-brand-neon font-semibold">Founding Client Rate</span
+          >. Applied exclusively in exchange for your testimonial and
+          word-of-mouth referrals.
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <!-- Tier 1 -->
-        <div class="relative flex flex-col p-8 rounded-2xl border bg-brand-dark border-gray-800 reveal">
+        <div
+          class="relative flex flex-col p-8 rounded-2xl border bg-brand-dark border-gray-800 reveal">
           <div class="mb-8">
-            <h3 class="text-2xl font-display font-bold text-white mb-3">Digital Handshake</h3>
-            <p class="text-sm text-gray-400 italic mb-6">"A clean, professional placeholder that proves you are a legitimate, high-end company."</p>
-            
+            <h3 class="text-2xl font-display font-bold text-white mb-3">
+              Digital Handshake
+            </h3>
+            <p class="text-sm text-gray-400 italic mb-6">
+              "A clean, professional placeholder that proves you are a
+              legitimate, high-end company."
+            </p>
+
             <div class="flex flex-col gap-1 items-baseline mb-2">
-              <span class="text-gray-500 font-medium line-through decoration-red-500 decoration-2">Standard: $1,800 + GST</span>
+              <span
+                class="text-gray-500 font-medium line-through decoration-red-500 decoration-2"
+                >Standard: $2,500 + GST</span
+              >
               <div class="flex items-baseline gap-2">
-                <span class="text-4xl font-display font-bold text-brand-neon">$1,000</span>
+                <span class="text-4xl font-display font-bold text-brand-neon"
+                  >$1,000</span
+                >
                 <span class="text-gray-400 text-sm italic">+ GST</span>
               </div>
             </div>
           </div>
-          
+
           <div class="flex-grow space-y-6">
             <div>
-              <p class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-1">Platform</p>
+              <p
+                class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-1">
+                Platform
+              </p>
               <p class="text-white">Squarespace Optimization</p>
             </div>
             <div>
-              <p class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-1">Scope</p>
+              <p
+                class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-1">
+                Scope
+              </p>
               <p class="text-white">3 Core Pages (Home, About, Contact)</p>
             </div>
             <div>
-              <p class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-3">Key Features</p>
+              <p
+                class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-3">
+                Key Features
+              </p>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3 text-sm text-gray-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-brand-neon shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-5 h-5 text-brand-neon shrink-0">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
                   <span>Full aesthetic overhaul using brand colors</span>
                 </li>
                 <li class="flex items-start gap-3 text-sm text-gray-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-brand-neon shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-5 h-5 text-brand-neon shrink-0">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
                   <span>Responsive mobile design</span>
                 </li>
                 <li class="flex items-start gap-3 text-sm text-gray-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-brand-neon shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-5 h-5 text-brand-neon shrink-0">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
                   <span>Standard contact form</span>
                 </li>
               </ul>
             </div>
             <div class="pt-4 border-t border-gray-800 mt-auto">
-              <p class="text-xs text-gray-500 uppercase font-bold tracking-widest mb-2">Why it works</p>
-              <p class="text-sm text-gray-400">It's fast, utilizes what you already have, and ensures you make a great first impression without a massive investment.</p>
+              <p
+                class="text-xs text-gray-500 uppercase font-bold tracking-widest mb-2">
+                Why it works
+              </p>
+              <p class="text-sm text-gray-400">
+                It's fast, utilizes what you already have, and ensures you make
+                a great first impression without a massive investment.
+              </p>
             </div>
           </div>
-          
-          <button class="mt-8 w-full py-4 font-bold rounded uppercase tracking-wider transition-all bg-brand-secondary text-white cursor-pointer hover:bg-gray-700 active:scale-95" onclick="window.location.href='mailto:hello@example.com?subject=Proposal%20Option%201%3A%20Digital%20Handshake'">
+
+          <button
+            class="mt-8 w-full py-4 font-bold rounded uppercase tracking-wider transition-all bg-brand-secondary text-white cursor-pointer hover:bg-gray-700 active:scale-95"
+            onclick="
+              window.location.href =
+                'mailto:cruzplamondon@gmail.com?subject=Proposal%20Option%201%3A%20Digital%20Handshake'
+            ">
             Select Tier 1
           </button>
         </div>
 
         <!-- Tier 2 -->
-        <div class="relative flex flex-col p-8 rounded-2xl border bg-brand-gray border-brand-neon shadow-[0_0_30px_rgba(204,255,0,0.15)] ring-1 ring-brand-neon reveal delay-100">
-          <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-neon text-black font-bold uppercase tracking-widest text-xs px-4 py-1.5 rounded-full">
+        <div
+          class="relative flex flex-col p-8 rounded-2xl border bg-brand-gray border-brand-neon shadow-[0_0_30px_rgba(204,255,0,0.15)] ring-1 ring-brand-neon reveal delay-100">
+          <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-neon text-black font-bold uppercase tracking-widest text-xs px-4 py-1.5 rounded-full">
             Recommended
           </div>
-          
+
           <div class="mb-8">
-            <h3 class="text-2xl font-display font-bold text-white mb-3">Lead Generator</h3>
-            <p class="text-sm text-gray-400 italic mb-6">"A polished, high-converting machine built to capture serious leads and filter out the noise."</p>
-            
+            <h3 class="text-2xl font-display font-bold text-white mb-3">
+              Lead Generator
+            </h3>
+            <p class="text-sm text-gray-400 italic mb-6">
+              "A polished, high-converting machine built to capture serious
+              leads and filter out the noise."
+            </p>
+
             <div class="flex flex-col gap-1 items-baseline mb-2">
-              <span class="text-gray-500 font-medium line-through decoration-red-500 decoration-2">Standard: $4,500 + GST</span>
+              <span
+                class="text-gray-500 font-medium line-through decoration-red-500 decoration-2"
+                >Standard: $7,500 + GST</span
+              >
               <div class="flex items-baseline gap-2">
-                <span class="text-4xl font-display font-bold text-brand-neon">$2,500</span>
+                <span class="text-4xl font-display font-bold text-brand-neon"
+                  >$2,500</span
+                >
                 <span class="text-gray-400 text-sm italic">+ GST</span>
               </div>
             </div>
           </div>
-          
+
           <div class="flex-grow space-y-6">
             <div>
-              <p class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-1">Platform</p>
+              <p
+                class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-1">
+                Platform
+              </p>
               <p class="text-white">Webflow (Custom Build)</p>
             </div>
             <div>
-              <p class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-1">Scope</p>
-              <p class="text-white">Up to 5 Pages (Including 'Services' dropdown)</p>
+              <p
+                class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-1">
+                Scope
+              </p>
+              <p class="text-white">
+                Up to 5 Pages (Including 'Services' dropdown)
+              </p>
             </div>
             <div>
-              <p class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-3">Key Features</p>
+              <p
+                class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-3">
+                Key Features
+              </p>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3 text-sm text-gray-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-brand-neon shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-5 h-5 text-brand-neon shrink-0">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
                   <span>Custom UI/UX design</span>
                 </li>
                 <li class="flex items-start gap-3 text-sm text-gray-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-brand-neon shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-5 h-5 text-brand-neon shrink-0">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
                   <span>Smart Forms (Filters out time-wasters)</span>
                 </li>
                 <li class="flex items-start gap-3 text-sm text-gray-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-brand-neon shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-5 h-5 text-brand-neon shrink-0">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
                   <span>Mobile 'Tap-to-Call' functionality</span>
                 </li>
               </ul>
             </div>
             <div class="pt-4 border-t border-gray-800 mt-auto">
-              <p class="text-xs text-gray-500 uppercase font-bold tracking-widest mb-2">Why it works</p>
-              <p class="text-sm text-gray-400">This is the sweet spot. A site that loads faster and looks far more expensive, saving you time on the backend.</p>
+              <p
+                class="text-xs text-gray-500 uppercase font-bold tracking-widest mb-2">
+                Why it works
+              </p>
+              <p class="text-sm text-gray-400">
+                This is the sweet spot. A site that loads faster and looks far
+                more expensive, saving you time on the backend.
+              </p>
             </div>
           </div>
-          
-          <button class="mt-8 w-full py-4 font-bold rounded uppercase tracking-wider transition-all bg-brand-neon text-black cursor-pointer hover:bg-white active:scale-95" onclick="window.location.href='mailto:hello@example.com?subject=Proposal%20Option%202%3A%20Lead%20Generator'">
+
+          <button
+            class="mt-8 w-full py-4 font-bold rounded uppercase tracking-wider transition-all bg-brand-neon text-black cursor-pointer hover:bg-white active:scale-95"
+            onclick="
+              window.location.href =
+                'mailto:cruzplamondon@gmail.com com?subject=Proposal%20Option%202%3A%20Lead%20Generator'
+            ">
             Select Tier 2
           </button>
         </div>
 
         <!-- Tier 3 -->
-        <div class="relative flex flex-col p-8 rounded-2xl border bg-brand-dark border-gray-800 reveal delay-200">
+        <div
+          class="relative flex flex-col p-8 rounded-2xl border bg-brand-dark border-gray-800 reveal delay-200">
           <div class="mb-8">
-            <h3 class="text-2xl font-display font-bold text-white mb-3">Business Engine</h3>
-            <p class="text-sm text-gray-400 italic mb-6">"A fully automated sales operating system and complete brand overhaul."</p>
-            
+            <h3 class="text-2xl font-display font-bold text-white mb-3">
+              Business Engine
+            </h3>
+            <p class="text-sm text-gray-400 italic mb-6">
+              "A fully automated sales operating system and complete brand
+              overhaul."
+            </p>
+
             <div class="flex flex-col gap-1 items-baseline mb-2">
-              <span class="text-gray-500 font-medium line-through decoration-red-500 decoration-2">Standard: $10,000 + GST</span>
+              <span
+                class="text-gray-500 font-medium line-through decoration-red-500 decoration-2"
+                >Standard: $17,500 + GST</span
+              >
               <div class="flex items-baseline gap-2">
-                <span class="text-4xl font-display font-bold text-brand-neon">$7,500</span>
+                <span class="text-4xl font-display font-bold text-brand-neon"
+                  >$7,500</span
+                >
                 <span class="text-gray-400 text-sm italic">+ GST</span>
               </div>
             </div>
           </div>
-          
+
           <div class="flex-grow space-y-6">
             <div>
-              <p class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-1">Platform</p>
+              <p
+                class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-1">
+                Platform
+              </p>
               <p class="text-white">Webflow + CRM Integration</p>
             </div>
             <div>
-              <p class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-1">Scope</p>
+              <p
+                class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-1">
+                Scope
+              </p>
               <p class="text-white">Up to 7 Pages</p>
             </div>
             <div>
-              <p class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-3">Key Features</p>
+              <p
+                class="text-xs text-brand-neon uppercase font-bold tracking-widest mb-3">
+                Key Features
+              </p>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3 text-sm text-gray-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-brand-neon shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-5 h-5 text-brand-neon shrink-0">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
                   <span>Brand Overhaul & Logo Redesign</span>
                 </li>
                 <li class="flex items-start gap-3 text-sm text-gray-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-brand-neon shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-5 h-5 text-brand-neon shrink-0">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
                   <span>Premium UI/UX animations</span>
                 </li>
                 <li class="flex items-start gap-3 text-sm text-gray-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-brand-neon shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-5 h-5 text-brand-neon shrink-0">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
                   <span>Automated Lead Routing (SMS/Email)</span>
                 </li>
               </ul>
             </div>
             <div class="pt-4 border-t border-gray-800 mt-auto">
-              <p class="text-xs text-gray-500 uppercase font-bold tracking-widest mb-2">Why it works</p>
-              <p class="text-sm text-gray-400">Guarantees your customers get an immediate response, and you never miss a lead while your hands are full on a job site.</p>
+              <p
+                class="text-xs text-gray-500 uppercase font-bold tracking-widest mb-2">
+                Why it works
+              </p>
+              <p class="text-sm text-gray-400">
+                Guarantees your customers get an immediate response, and you
+                never miss a lead while your hands are full on a job site.
+              </p>
             </div>
           </div>
-          
-          <button class="mt-8 w-full py-4 font-bold rounded uppercase tracking-wider transition-all bg-brand-secondary text-white cursor-pointer hover:bg-gray-700 active:scale-95" onclick="window.location.href='mailto:hello@example.com?subject=Proposal%20Option%203%3A%20Business%20Engine'">
+
+          <button
+            class="mt-8 w-full py-4 font-bold rounded uppercase tracking-wider transition-all bg-brand-secondary text-white cursor-pointer hover:bg-gray-700 active:scale-95"
+            onclick="
+              window.location.href =
+                'mailto:cruzplamondon@gmail.com com?subject=Proposal%20Option%203%3A%20Business%20Engine'
+            ">
             Select Tier 3
           </button>
         </div>
@@ -328,101 +655,170 @@
 
       <!-- TABLE COMPARISON -->
       <div class="mt-24 overflow-x-auto reveal delay-200">
-        <h3 class="text-2xl font-display font-bold mb-8 text-white uppercase tracking-wider text-center">Package Comparison</h3>
+        <h3
+          class="text-2xl font-display font-bold mb-8 text-white uppercase tracking-wider text-center">
+          Package Comparison
+        </h3>
         <table class="w-full text-left border-collapse min-w-[800px]">
           <thead>
             <tr class="border-b-2 border-brand-secondary text-white">
-              <th class="py-4 px-6 font-display font-medium text-lg w-1/4">Feature</th>
-              <th class="py-4 px-6 font-display font-medium text-lg w-1/4">Tier 1: Digital Handshake</th>
-              <th class="py-4 px-6 font-display font-medium text-lg w-1/4 text-brand-neon">Tier 2: Lead Generator</th>
-              <th class="py-4 px-6 font-display font-medium text-lg w-1/4">Tier 3: Business Engine</th>
+              <th class="py-4 px-6 font-display font-medium text-lg w-1/4">
+                Feature
+              </th>
+              <th class="py-4 px-6 font-display font-medium text-lg w-1/4">
+                Tier 1: Digital Handshake
+              </th>
+              <th
+                class="py-4 px-6 font-display font-medium text-lg w-1/4 text-brand-neon">
+                Tier 2: Lead Generator
+              </th>
+              <th class="py-4 px-6 font-display font-medium text-lg w-1/4">
+                Tier 3: Business Engine
+              </th>
             </tr>
           </thead>
           <tbody class="text-gray-300">
-            <tr class="border-b border-brand-secondary/50 bg-brand-gray/30 hover:bg-brand-gray/60 transition-colors">
-              <td class="py-5 px-6 font-bold text-white uppercase text-xs tracking-widest">Platform</td>
+            <tr
+              class="border-b border-brand-secondary/50 bg-brand-gray/30 hover:bg-brand-gray/60 transition-colors">
+              <td
+                class="py-5 px-6 font-bold text-white uppercase text-xs tracking-widest">
+                Platform
+              </td>
               <td class="py-5 px-6">Squarespace Optimization</td>
               <td class="py-5 px-6">Webflow (Custom Build)</td>
               <td class="py-5 px-6">Webflow + CRM integration</td>
             </tr>
-            <tr class="border-b border-brand-secondary/50 hover:bg-brand-gray/40 transition-colors">
-              <td class="py-5 px-6 font-bold text-white uppercase text-xs tracking-widest">Scope</td>
+            <tr
+              class="border-b border-brand-secondary/50 hover:bg-brand-gray/40 transition-colors">
+              <td
+                class="py-5 px-6 font-bold text-white uppercase text-xs tracking-widest">
+                Scope
+              </td>
               <td class="py-5 px-6">3 Core Pages</td>
               <td class="py-5 px-6">Up to 5 Pages</td>
               <td class="py-5 px-6">Up to 7 Pages</td>
             </tr>
-            <tr class="border-b border-brand-secondary/50 bg-brand-gray/30 hover:bg-brand-gray/60 transition-colors">
-              <td class="py-5 px-6 font-bold text-white uppercase text-xs tracking-widest">Lead Capture</td>
+            <tr
+              class="border-b border-brand-secondary/50 bg-brand-gray/30 hover:bg-brand-gray/60 transition-colors">
+              <td
+                class="py-5 px-6 font-bold text-white uppercase text-xs tracking-widest">
+                Lead Capture
+              </td>
               <td class="py-5 px-6">Standard Form</td>
               <td class="py-5 px-6">Smart Form (Filters tire-kickers)</td>
               <td class="py-5 px-6">Automated SMS/Email Routing</td>
             </tr>
-            <tr class="border-b border-brand-secondary/50 hover:bg-brand-gray/40 transition-colors">
-              <td class="py-5 px-6 font-bold text-white uppercase text-xs tracking-widest">Design & UX</td>
+            <tr
+              class="border-b border-brand-secondary/50 hover:bg-brand-gray/40 transition-colors">
+              <td
+                class="py-5 px-6 font-bold text-white uppercase text-xs tracking-widest">
+                Design & UX
+              </td>
               <td class="py-5 px-6">Brand Color Overhaul</td>
               <td class="py-5 px-6">Custom UI, Tap-to-Call</td>
               <td class="py-5 px-6">Premium animations, Logo Redesign</td>
             </tr>
-            <tr class="border-b border-brand-secondary/50 bg-brand-gray/50 hover:bg-brand-gray/70 transition-colors">
-              <td class="py-8 px-6 font-bold text-white uppercase text-sm tracking-widest">Investment</td>
+            <tr
+              class="border-b border-brand-secondary/50 bg-brand-gray/50 hover:bg-brand-gray/70 transition-colors">
+              <td
+                class="py-8 px-6 font-bold text-white uppercase text-sm tracking-widest">
+                Investment
+              </td>
               <td class="py-8 px-6">
                 <div class="flex flex-col">
-                  <span class="line-through text-gray-500 decoration-red-500 decoration-2 text-sm mb-1">$1,800</span>
-                  <span class="text-brand-neon font-display font-bold text-2xl tracking-wide">$1,000</span>
+                  <span
+                    class="line-through text-gray-500 decoration-red-500 decoration-2 text-sm mb-1"
+                    >$2,500</span
+                  >
+                  <span
+                    class="text-brand-neon font-display font-bold text-2xl tracking-wide"
+                    >$1,000</span
+                  >
                 </div>
               </td>
               <td class="py-8 px-6 bg-brand-neon/5 relative">
                 <div class="flex flex-col">
-                  <span class="line-through text-gray-500 decoration-red-500 decoration-2 text-sm mb-1">$4,500</span>
-                  <span class="text-brand-neon font-display font-bold text-2xl tracking-wide">$2,500</span>
+                  <span
+                    class="line-through text-gray-500 decoration-red-500 decoration-2 text-sm mb-1"
+                    >$7,500</span
+                  >
+                  <span
+                    class="text-brand-neon font-display font-bold text-2xl tracking-wide"
+                    >$2,500</span
+                  >
                 </div>
               </td>
               <td class="py-8 px-6">
                 <div class="flex flex-col">
-                  <span class="line-through text-gray-500 decoration-red-500 decoration-2 text-sm mb-1">$10,000</span>
-                  <span class="text-brand-neon font-display font-bold text-2xl tracking-wide">$7,500</span>
+                  <span
+                    class="line-through text-gray-500 decoration-red-500 decoration-2 text-sm mb-1"
+                    >$17,500</span
+                  >
+                  <span
+                    class="text-brand-neon font-display font-bold text-2xl tracking-wide"
+                    >$7,500</span
+                  >
                 </div>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-      
-      <p class="text-center text-gray-500 text-sm mt-12 reveal">Note: A 2% CC processing fee applies to all packages. Copywriting is provided by your team.</p>
+
+      <p class="text-center text-gray-500 text-sm mt-12 reveal">
+        Note: A 2% CC processing fee applies to all packages. Copywriting is
+        provided by your team.
+      </p>
     </section>
 
     <!-- TIMELINE -->
-    <section class="py-24 px-6 max-w-7xl mx-auto border-t border-brand-secondary">
-      <h2 class="text-4xl md:text-5xl font-display font-bold mb-16 text-center text-white uppercase tracking-wider reveal">Project Timeline</h2>
-      
+    <section
+      class="py-24 px-6 max-w-7xl mx-auto border-t border-brand-secondary">
+      <h2
+        class="text-4xl md:text-5xl font-display font-bold mb-16 text-center text-white uppercase tracking-wider reveal">
+        Project Timeline
+      </h2>
+
       <div class="relative max-w-4xl mx-auto">
-        <div class="absolute top-1/2 left-0 w-full h-[2px] bg-brand-secondary -translate-y-1/2 hidden md:block"></div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative z-10">
-          <div class="flex flex-row md:flex-col items-center md:text-center gap-6 md:gap-4 reveal delay-100">
-            <div class="w-12 h-12 rounded-full border-4 border-brand-neon bg-brand-dark flex items-center justify-center shrink-0 z-10 shadow-[0_0_15px_rgba(204,255,0,0.2)]">
+        <div
+          class="absolute top-1/2 left-0 w-full h-[2px] bg-brand-secondary -translate-y-1/2 hidden md:block"></div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative z-10">
+          <div
+            class="flex flex-row md:flex-col items-center md:text-center gap-6 md:gap-4 reveal delay-100">
+            <div
+              class="w-12 h-12 rounded-full border-4 border-brand-neon bg-brand-dark flex items-center justify-center shrink-0 z-10 shadow-[0_0_15px_rgba(204,255,0,0.2)]">
               <div class="w-3 h-3 bg-brand-neon rounded-full"></div>
             </div>
             <div>
               <h4 class="text-xl font-bold text-brand-neon mb-1">Week 1</h4>
-              <h5 class="font-semibold text-white mb-1">Kickoff & Asset Collection</h5>
+              <h5 class="font-semibold text-white mb-1">
+                Kickoff & Asset Collection
+              </h5>
               <p class="text-gray-400 text-sm">(Logins, text, photos).</p>
             </div>
           </div>
-          
-          <div class="flex flex-row md:flex-col items-center md:text-center gap-6 md:gap-4 reveal delay-200">
-            <div class="w-12 h-12 rounded-full border-4 border-brand-neon bg-brand-dark flex items-center justify-center shrink-0 z-10 shadow-[0_0_15px_rgba(204,255,0,0.2)]">
+
+          <div
+            class="flex flex-row md:flex-col items-center md:text-center gap-6 md:gap-4 reveal delay-200">
+            <div
+              class="w-12 h-12 rounded-full border-4 border-brand-neon bg-brand-dark flex items-center justify-center shrink-0 z-10 shadow-[0_0_15px_rgba(204,255,0,0.2)]">
               <div class="w-3 h-3 bg-brand-neon rounded-full"></div>
             </div>
             <div>
               <h4 class="text-xl font-bold text-brand-neon mb-1">Week 2</h4>
-              <h5 class="font-semibold text-white mb-1">Design & Structure Review</h5>
+              <h5 class="font-semibold text-white mb-1">
+                Design & Structure Review
+              </h5>
               <p class="text-gray-400 text-sm">(Wireframe approval).</p>
             </div>
           </div>
-          
-          <div class="flex flex-row md:flex-col items-center md:text-center gap-6 md:gap-4 reveal delay-300">
-            <div class="w-12 h-12 rounded-full border-4 border-brand-neon bg-brand-dark flex items-center justify-center shrink-0 z-10 shadow-[0_0_15px_rgba(204,255,0,0.2)]">
+
+          <div
+            class="flex flex-row md:flex-col items-center md:text-center gap-6 md:gap-4 reveal delay-300">
+            <div
+              class="w-12 h-12 rounded-full border-4 border-brand-neon bg-brand-dark flex items-center justify-center shrink-0 z-10 shadow-[0_0_15px_rgba(204,255,0,0.2)]">
               <div class="w-3 h-3 bg-brand-neon rounded-full"></div>
             </div>
             <div>
@@ -431,127 +827,263 @@
               <p class="text-gray-400 text-sm">Mobile Optimization.</p>
             </div>
           </div>
-          
-          <div class="flex flex-row md:flex-col items-center md:text-center gap-6 md:gap-4 reveal delay-400">
-            <div class="w-12 h-12 rounded-full border-4 border-brand-neon bg-brand-dark flex items-center justify-center shrink-0 z-10 shadow-[0_0_15px_rgba(204,255,0,0.2)]">
+
+          <div
+            class="flex flex-row md:flex-col items-center md:text-center gap-6 md:gap-4 reveal delay-400">
+            <div
+              class="w-12 h-12 rounded-full border-4 border-brand-neon bg-brand-dark flex items-center justify-center shrink-0 z-10 shadow-[0_0_15px_rgba(204,255,0,0.2)]">
               <div class="w-3 h-3 bg-brand-neon rounded-full"></div>
             </div>
             <div>
               <h4 class="text-xl font-bold text-brand-neon mb-1">Week 4</h4>
               <h5 class="font-semibold text-white mb-1">Testing & Launch</h5>
-              <p class="text-gray-400 text-sm">Rigorous Testing, Form Checks & Final Launch.</p>
+              <p class="text-gray-400 text-sm">
+                Rigorous Testing, Form Checks & Final Launch.
+              </p>
             </div>
           </div>
         </div>
       </div>
-      
-      <div class="mt-20 grid md:grid-cols-2 gap-12 items-center bg-brand-gray p-10 md:p-14 rounded-2xl border border-brand-secondary/50 reveal delay-200">
+
+      <div
+        class="mt-20 grid md:grid-cols-2 gap-12 items-center bg-brand-gray p-10 md:p-14 rounded-2xl border border-brand-secondary/50 reveal delay-200">
         <div>
-          <h3 class="text-3xl font-display font-bold mb-4 uppercase tracking-wide">What We Need From You</h3>
-          <p class="text-gray-400 mb-6 font-medium">Because you are busy running multiple businesses, our process is designed to require as little of your time as possible.</p>
+          <h3
+            class="text-3xl font-display font-bold mb-4 uppercase tracking-wide">
+            What We Need From You
+          </h3>
+          <p class="text-gray-400 mb-6 font-medium">
+            Because you are busy running multiple businesses, our process is
+            designed to require as little of your time as possible.
+          </p>
           <ul class="space-y-4">
             <li class="flex items-start gap-4">
-              <span class="text-brand-neon font-display font-bold text-xl leading-none">01</span>
+              <span
+                class="text-brand-neon font-display font-bold text-xl leading-none"
+                >01</span
+              >
               <div>
                 <strong class="block text-white">Asset Handoff</strong>
-                <span class="text-gray-400 text-sm">Providing your text/copy, logos, and any project photos.</span>
+                <span class="text-gray-400 text-sm"
+                  >Providing your text/copy, logos, and any project
+                  photos.</span
+                >
               </div>
             </li>
             <li class="flex items-start gap-4">
-              <span class="text-brand-neon font-display font-bold text-xl leading-none">02</span>
+              <span
+                class="text-brand-neon font-display font-bold text-xl leading-none"
+                >02</span
+              >
               <div>
                 <strong class="block text-white line-through">Access</strong>
-                <span class="text-gray-400 text-sm">Granting us login access to your domain provider/Squarespace. <span class="text-brand-neon italic">DONE!</span></span>
+                <span class="text-gray-400 text-sm"
+                  >Granting us login access to your domain provider/Squarespace.
+                  <span class="text-brand-neon italic">DONE!</span></span
+                >
               </div>
             </li>
             <li class="flex items-start gap-4">
-              <span class="text-brand-neon font-display font-bold text-xl leading-none">03</span>
+              <span
+                class="text-brand-neon font-display font-bold text-xl leading-none"
+                >03</span
+              >
               <div>
                 <strong class="block text-white">Approvals</strong>
-                <span class="text-gray-400 text-sm">Reviewing the initial design mockup and giving the final "green light" before launch.</span>
+                <span class="text-gray-400 text-sm"
+                  >Reviewing the initial design mockup and giving the final
+                  "green light" before launch.</span
+                >
               </div>
             </li>
           </ul>
         </div>
-        <div class="flex flex-col items-center justify-center text-center p-8 bg-brand-dark rounded-xl border border-brand-neon/20">
-          <span class="text-[6rem] leading-none font-display font-bold text-brand-neon tracking-tighter">2-3</span>
-          <span class="text-2xl font-bold uppercase tracking-[0.2em] text-white mt-2">Hours Total</span>
+        <div
+          class="flex flex-col items-center justify-center text-center p-8 bg-brand-dark rounded-xl border border-brand-neon/20">
+          <span
+            class="text-[6rem] leading-none font-display font-bold text-brand-neon tracking-tighter"
+            >2-3</span
+          >
+          <span
+            class="text-2xl font-bold uppercase tracking-[0.2em] text-white mt-2"
+            >Hours Total</span
+          >
         </div>
       </div>
     </section>
 
     <!-- NEXT STEPS -->
-    <section class="py-24 px-6 max-w-7xl mx-auto border-t border-brand-secondary">
+    <section
+      class="py-24 px-6 max-w-7xl mx-auto border-t border-brand-secondary">
       <div class="grid md:grid-cols-2 gap-16">
         <div class="reveal-left">
-          <h2 class="text-3xl font-display font-bold mb-8 text-white uppercase tracking-wider">Definition of "Done"</h2>
-          <p class="text-gray-400 mb-6">The project is officially complete when:</p>
+          <h2
+            class="text-3xl font-display font-bold mb-8 text-white uppercase tracking-wider">
+            Definition of "Done"
+          </h2>
+          <p class="text-gray-400 mb-6">
+            The project is officially complete when:
+          </p>
           <ul class="space-y-4">
             <li class="flex gap-4 items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-brand-neon shrink-0"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-              <span class="text-gray-300">The website is live on your primary domain (moderncircuit.ca).</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6 text-brand-neon shrink-0">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              <span class="text-gray-300"
+                >The website is live on your primary domain
+                (moderncircuit.ca).</span
+              >
             </li>
             <li class="flex gap-4 items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-brand-neon shrink-0"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-              <span class="text-gray-300">The site is fully responsive and looks perfect on mobile phones and desktops.</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6 text-brand-neon shrink-0">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              <span class="text-gray-300"
+                >The site is fully responsive and looks perfect on mobile phones
+                and desktops.</span
+              >
             </li>
             <li class="flex gap-4 items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-brand-neon shrink-0"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-              <span class="text-gray-300">All contact forms have been tested, and inquiries are successfully landing in your inbox (or CRM).</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6 text-brand-neon shrink-0">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              <span class="text-gray-300"
+                >All contact forms have been tested, and inquiries are
+                successfully landing in your inbox (or CRM).</span
+              >
             </li>
             <li class="flex gap-4 items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-brand-neon shrink-0"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-              <span class="text-gray-300">We have handed over full ownership and administrative control back to you.</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6 text-brand-neon shrink-0">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              <span class="text-gray-300"
+                >We have handed over full ownership and administrative control
+                back to you.</span
+              >
             </li>
           </ul>
         </div>
 
-        <div class="bg-brand-neon text-black p-10 rounded-2xl flex flex-col justify-center reveal-right delay-200">
-          <h2 class="text-4xl font-display font-bold mb-6 uppercase tracking-wider">Next Steps</h2>
+        <div
+          class="bg-brand-neon text-black p-10 rounded-2xl flex flex-col justify-center reveal-right delay-200">
+          <h2
+            class="text-4xl font-display font-bold mb-6 uppercase tracking-wider">
+            Next Steps
+          </h2>
           <p class="text-black/80 text-lg mb-8 font-medium">
-            To get started, simply reply to the email letting us know which of the three options aligns best with your goals for Modern Circuit Electrical.
+            To get started, simply reply to the email letting us know which of
+            the three options aligns best with your goals for Modern Circuit
+            Electrical.
           </p>
           <p class="text-black/80 font-medium mb-10">
-            From there, we will send over the initial invoice and a secure link to upload your text and photos so we can get to work.
+            From there, we will send over the initial invoice and a secure link
+            to upload your text and photos so we can get to work.
           </p>
-          
-          <button class="flex items-center justify-center gap-3 bg-black text-white py-4 px-8 rounded-full font-bold uppercase tracking-widest w-full hover:bg-gray-900 transition-all cursor-pointer active:scale-95" onclick="window.location.href='mailto:hello@example.com?subject=Re:%20Modern%20Circuit%20Electrical%20Proposal'">
-            Reply to Email 
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-brand-neon"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+
+          <button
+            class="flex items-center justify-center gap-3 bg-black text-white py-4 px-8 rounded-full font-bold uppercase tracking-widest w-full hover:bg-gray-900 transition-all cursor-pointer active:scale-95"
+            onclick="
+              window.location.href =
+                'mailto:cruzplamondon@gmail.com com?subject=Re:%20Modern%20Circuit%20Electrical%20Proposal'
+            ">
+            Reply to Email
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-5 h-5 text-brand-neon">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
           </button>
         </div>
       </div>
-      
+
       <footer class="mt-32 text-center text-gray-600 pb-8">
-        <p>Prepared by: <span class="text-brand-neon font-medium">Cruz Plamondon</span></p>
+        <p>
+          Prepared by:
+          <span class="text-brand-neon font-medium">Cruz Plamondon</span>
+        </p>
       </footer>
     </section>
 
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener("DOMContentLoaded", () => {
         // Intersection Observer for scroll animations
         const observerOptions = {
           root: null,
-          rootMargin: '0px',
-          threshold: 0.1
+          rootMargin: "0px",
+          threshold: 0.1,
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
+          entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add('active');
+              entry.target.classList.add("active");
               observer.unobserve(entry.target);
             }
           });
         }, observerOptions);
 
-        const animatedElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-        animatedElements.forEach(el => observer.observe(el));
+        const animatedElements = document.querySelectorAll(
+          ".reveal, .reveal-left, .reveal-right",
+        );
+        animatedElements.forEach((el) => observer.observe(el));
 
         // Parallax effect for the hero section
-        window.addEventListener('scroll', () => {
+        window.addEventListener("scroll", () => {
           const scrollY = window.scrollY;
-          const heroContent = document.getElementById('hero-content');
+          const heroContent = document.getElementById("hero-content");
           if (heroContent) {
             heroContent.style.transform = `translateY(${scrollY * 0.3}px)`;
             heroContent.style.opacity = `${Math.max(0, 1 - scrollY / 400)}`;
